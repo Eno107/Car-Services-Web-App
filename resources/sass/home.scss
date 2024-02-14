@@ -1,0 +1,452 @@
+@import "variables";
+
+.main-color {
+    color: $secondary-color;
+}
+
+.dividing-messages {
+    color: #c8d1dc76;
+}
+
+.img {
+    user-select: none;
+}
+
+.not-selectable {
+    user-select: none;
+}
+
+.main-button {
+    box-shadow:
+        rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+}
+
+.main-form {
+    box-shadow:
+        rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
+}
+
+.side-shadow {
+    box-shadow:
+        rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px;
+}
+
+.footer {
+    position: relative;
+    gap: 2vh;
+
+    &-text-overlay {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        // left: 18%;
+        width: 80%;
+        background-color: rgba(255, 255, 255, 0.9);
+        // padding: 20px;
+
+        & h1,
+        p {
+            margin: 0;
+            line-height: 100%;
+        }
+
+        & h1 {
+            font-size: 150%;
+            font-weight: bolder;
+            line-height: 100%;
+        }
+
+        @media screen and (max-width: $breakpoint-phone) {
+            background-color: unset;
+            position: static;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 1vh;
+        }
+
+        @media screen and (min-width: $breakpoint-phone) {
+            text-align: center;
+            padding: 0.5rem;
+            gap: 1vh;
+            box-shadow:
+                rgba(0, 0, 0, 0.4) 0px 2px 4px,
+                rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+                rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+            & h1 {
+                font-size: 220%;
+            }
+
+            & p {
+                font-size: 150%;
+            }
+        }
+    }
+
+    & img {
+        @media screen and (min-width: $breakpoint-tablet) {
+            display: block;
+            height: 40%;
+        }
+    }
+}
+
+// Home
+
+.home-header-text {
+    font-size: 4.8vh;
+    line-height: 5.3vh;
+    font-weight: 700;
+    letter-spacing: 0em;
+}
+
+.home-paragraph {
+    font-size: 2.8vh;
+    line-height: 3vh;
+    letter-spacing: 0em;
+}
+
+ul {
+    list-style-position: inside;
+    // gap: 1vh;
+    color: white;
+    li {
+        width: fit-content;
+        list-style-type: disc;
+        font-size: 2.5vh;
+        line-height: 2.7vh;
+        letter-spacing: 0em;
+        text-align: left;
+
+        &::marker {
+            color: $secondary-color;
+        }
+    }
+}
+
+.home-header {
+    background-color: $secondary-color;
+    border-radius: 0.375rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+    margin: 1.25rem 0.75rem;
+    box-shadow:
+        rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+    font-weight: 500;
+    color: white;
+
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        display: none;
+    }
+
+    @media screen and (min-width: $breakpoint-phone) {
+        &-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            background-color: white;
+            color: $secondary-color;
+            width: 50vw;
+            // font-size: 250%;
+        }
+
+        p {
+            display: block;
+            text-align: center;
+        }
+    }
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    display: none;
+
+    @media screen and (max-width: $breakpoint-phone) {
+        display: flex;
+    }
+}
+
+.carousel .carousel-item {
+    height: 30vh;
+    width: 65vw;
+    margin-right: 1rem;
+    flex: 0 0 auto;
+}
+
+.main-h1 {
+    border-color: $secondary-color;
+}
+
+.premium-services {
+    display: none;
+    width: 100%;
+
+    @media screen and (min-width: $breakpoint-phone) {
+        display: flex;
+        gap: 1vh;
+        justify-content: center;
+
+        &-image {
+            width: 20vw;
+            height: 20vh;
+        }
+    }
+}
+
+.home-grid-card-shadow-text {
+    font-size: 280%;
+
+    @media screen and (min-width: $breakpoint-tabletx) {
+        font-size: 380%;
+    }
+}
+
+.home-bonus-services {
+    display: none;
+
+    &-phone {
+        display: block;
+
+        & > div {
+            padding-top: 2vh;
+            padding-bottom: 4vh;
+
+            & > div {
+                gap: 3vh;
+            }
+        }
+
+        &-main-header {
+            font-size: xx-large;
+            color: white;
+            text-align: center;
+            padding-left: 1vw;
+            padding-right: 1vw;
+        }
+
+        & ul {
+            gap: 4vw 4vh;
+            justify-content: center;
+            align-items: center;
+            & li {
+                list-style-position: inside;
+            }
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-phone) {
+        display: block;
+
+        &-phone {
+            display: none;
+        }
+    }
+}
+
+.phone {
+    display: block;
+
+    @media screen and (min-width: $breakpoint-phone) {
+        display: none;
+    }
+}
+
+// Services
+
+.services-columns {
+    display: none;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: flex;
+    }
+}
+
+.services-rows {
+    display: block;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: none;
+    }
+}
+
+.service-show {
+    display: flex;
+    flex-direction: row;
+
+    & > div:first-child {
+        display: block;
+    }
+
+    & > div:nth-child(2) {
+        display: none;
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        flex-direction: column;
+
+        & > div:first-child {
+            display: none;
+        }
+
+        & > div:nth-child(2) {
+            display: block;
+        }
+    }
+}
+
+.card {
+    position: relative;
+    // background-color: #30344c;
+    padding: 1em;
+    z-index: 5;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    // max-width: 300px;
+    transition: 200ms ease-in-out;
+    height: fit-content;
+}
+
+.username {
+    color: #c6e1ed;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+}
+
+.body .text {
+    margin: 0 10px 0 0;
+    white-space: pre-line;
+    color: #c0c3d7;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.card-footer {
+    position: relative;
+    width: 100%;
+    color: #9fa4aa;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    margin-top: 10px;
+}
+
+.card-footer div {
+    margin-right: 1rem;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card-footer svg {
+    margin-right: 5px;
+    height: 100%;
+    stroke: #9fa4aa;
+}
+
+.viewer span {
+    height: 20px;
+    width: 20px;
+    background-color: rgb(28, 117, 219);
+    margin-right: -6px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 8px;
+    color: #fff;
+    padding: 2px;
+}
+
+.viewer span svg {
+    stroke: #fff;
+}
+
+//
+
+.makes {
+    height: 40px;
+}
+.card-makes {
+    width: 100%;
+    height: 20px;
+    display: flex;
+
+    &-holder {
+        height: 100%;
+    }
+}
+
+.prob-row {
+    display: block;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: none;
+    }
+}
+
+.prob-col {
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: grid;
+    }
+}
+
+.prob-show div {
+    color: #e1e3f2;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.prob-show .username {
+    color: #c6e1ed;
+    // font-size: 0.85em;
+    font-weight: 600;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 0.3s ease-in-out;
+}
